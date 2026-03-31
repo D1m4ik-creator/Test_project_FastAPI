@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: apibd2
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: L7062006v.
+    ports:
+      - "45432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+
+volumes:
+  pgdata:
+    name: pgdata
